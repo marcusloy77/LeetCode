@@ -33,25 +33,19 @@ var addTwoNumbers = function(l1, l2) {
     for (let i = stringNum2.length - 1; i >= 0; i--) {
         reversedTotalNum2 = reversedTotalNum2 + stringNum2[i]
     }
-    
 
-    
-    console.log((reversedTotalNum1), (reversedTotalNum2), 'total int')
-    console.log(10000000000000000000000000001)
-    
+    //bigInt was used as 1+e30 edge case was failing
     let totalNum = BigInt((BigInt(reversedTotalNum1) + BigInt(reversedTotalNum2))).toString()
     
-    console.log(totalNum, 'totalnumber')
     let reversedTotalNum = ''
     for (let i = totalNum.length - 1; i >= 0; i--) {
         reversedTotalNum = reversedTotalNum + totalNum[i]
     }
     
-    console.log(reversedTotalNum)
-    let obj = createListNode(reversedTotalNum)
+
+    let finalLinkedList = createListNode(reversedTotalNum)
     
-    console.log(obj)
-    return obj
+    return finalLinkedList
 
 };
 
